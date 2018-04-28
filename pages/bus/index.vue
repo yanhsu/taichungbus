@@ -36,7 +36,7 @@ export default {
 		},
 		methods: {
 			getOneBusInfo: function (id,q) {
-				this.$router.push(`bus/${id}?q=${q}`)
+				this.$router.push(`/${id}?q=${q}`)
 			}
 		}
 }
