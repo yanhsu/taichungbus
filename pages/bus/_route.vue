@@ -22,16 +22,12 @@ export default {
 	async fetch ({ env, store, req, params, query }) {
 		const id = params.route
 		const q = query.q
-		if(store.state.bus.IntervalID) {
-			const id = store.state.bus.IntervalID
-			console.log(id)
-			clearInterval(id)
-		}
+
+
+		for (var i = 1; i < 99999; i++)
+		clearInterval(i)
+		
 		await store.dispatch('bus/getBusInfo',{id, q})
-		const intervalId = setInterval(async function () {
-			await store.dispatch('bus/getBusInfo',{id, q})
-		},60000)
-		store.commit('bus/setIntervalId', intervalId);
 	},
 	computed: {
 		busInfo: function() {
