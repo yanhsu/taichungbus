@@ -1,6 +1,5 @@
 <template>
   <div>
-    {{ message }}
   </div>
 </template>
 
@@ -10,11 +9,6 @@
 export default {
   asyncData ({redirect}) {
     redirect('/bus')
-  },
-  data () {
-    return{
-      message: this.$firebase.database().ref('message')
-    }
   }
 }
 </script>
