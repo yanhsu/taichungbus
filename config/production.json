@@ -1,0 +1,5 @@
+{
+    "setting": {
+        "api": "http://e-traffic.taichung.gov.tw/DataAPI/api"
+    }
+}
