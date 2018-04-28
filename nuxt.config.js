@@ -1,6 +1,9 @@
 const config = require('config')
 const globalSetting = config.get('setting')
 module.exports = {
+  router: {
+    base: '/bus/'
+  },
   /*
   ** Headers of the page
   */
