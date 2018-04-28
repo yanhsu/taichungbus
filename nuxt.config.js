@@ -2,7 +2,7 @@ const config = require('config')
 const globalSetting = config.get('setting')
 module.exports = {
   router: {
-    base: '/bus/'
+    base: '/taichungbus/'
   },
   /*
   ** Headers of the page
