@@ -37,9 +37,6 @@ export default {
 	},
 	getBusInfo: async function ({ commit, state, dispatch }, { id, q}) {
 		try {
-			const intervalId = setInterval(function () {
-				dispatch('getBusInfo',{id, q})
-			},50000)
 			let busInfo = await axios({
 				url: `${process.env.api}/BusRouteAPI/${id}/${q}`,
 				method: 'get'
@@ -66,6 +63,9 @@ export default {
 				tempStop.time = stop.SourceDateTime
 				temp.push(tempStop)
 			}
+			const intervalId = setInterval(function () {
+				dispatch('getBusInfo2',{id, q})
+			},10000)
 			commit('setInfo',temp)
 		} catch (err) {
 			console.log(err)

@@ -26,8 +26,13 @@ export default {
 
 		for (var i = 1; i < 99999; i++)
 		clearInterval(i)
-		
-		await store.dispatch('bus/getBusInfo',{id, q})
+	},
+	created: async function(){
+		const id = this.$route.params.route
+		const q = this.$route.query.q
+		console.log(id);
+		console.log(q);
+		await this.$store.dispatch('bus/getBusInfo',{id, q})
 	},
 	computed: {
 		busInfo: function() {
