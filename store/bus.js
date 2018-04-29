@@ -65,7 +65,7 @@ export default {
 			}
 			const intervalId = setInterval(function () {
 				dispatch('getBusInfo2',{id, q})
-			},10000)
+			},30000)
 			commit('setInfo',temp)
 		} catch (err) {
 			console.log(err)
