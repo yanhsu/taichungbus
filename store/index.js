@@ -10,7 +10,7 @@ const store = () => {
     mutations: {
     },
     modules: {
-      bus,
+      bus
     }
   })
 }

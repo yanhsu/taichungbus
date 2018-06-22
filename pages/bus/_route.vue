@@ -1,5 +1,10 @@
 <template>
 	<div class="busInfo">
+		<b-navbar type="dark" variant="info">
+			<b-navbar-nav :justified=true>
+				<b-btn variant="outline-warning" @click="()=>{$router.push('/bus')}">返回</b-btn>
+			</b-navbar-nav>
+		</b-navbar>
 		<no-ssr>
  			<hzqing-vue-timeline :dataList="busInfo">
 
